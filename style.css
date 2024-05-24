@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    overflow: scroll;
+}
+.row{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    background-color: rgb(17, 17, 160);
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100px;
+    
+}
+nav ul a {
+    padding: 0 30px;
+    
+}
+
+#logo{
+    margin: 30px;
+    padding-left: 100px;
+}
+#logo img{
+    width: 50px;
+    height: 50px;
+}
+#datosMenu{
+    
+    margin: 20px;
+    padding-right: 150px;
+}
+
+#datosMenu li{
+    border-radius: 100px;
+    text-align: right;
+}
+
+#datosMenu li a{
+    text-align: right;
+    border-radius: 100px;
+}
+
+#datosMenu li a:hover{
+    border-radius: 100px;
+    background-color: #0a0a0a;
+    color: rgb(255, 255, 255);
+}
+.dropdown-content{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#iconoMenu{
+    font-size: 50px;
+    margin: 20px;
+}
+
+
+
+/* Cambiar color de los indicadores no activos */
+#carruselId .indicators .indicator-item {
+    background-color: #bdbdbd; /* Color gris claro para los indicadores no activos */
+}
+
+/* Cambiar color de los indicadores activos */
+#carruselId .indicators .indicator-item.active {
+    background-color: #ff4081; /* Color rosa para el indicador activo */
+}
+/* Estilos para el carrusel automático */
+#carruselAutoId{
+    background-color: #ffff;
+}
+#carruselAutoId img{
+    
+    height: 80px;
+}
