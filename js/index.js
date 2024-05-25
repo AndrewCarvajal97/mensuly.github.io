@@ -5,21 +5,23 @@ document.addEventListener('DOMContentLoaded', function() {
         direction: 'top',
         hoverEnabled: true,
     };
+    
     M.FloatingActionButton.init(elementos_btn_flotante, opciones_btn_flotante);
+
+    // Inicializar Sidenav
+    let elementos_sidenav = document.querySelectorAll('.sidenav');
+    let sidenavInstance=M.Sidenav.init(elementos_sidenav);
 
     // Inicializar Dropdown
     let elementos_desplegable = document.querySelectorAll('.dropdown-trigger');
     let opciones_desplegable = {
-        hover: true,
+        hover: false,
         coverTrigger: false,
-        closeOnClick:false,
         constrainWidth:false,
     };
-    M.Dropdown.init(elementos_desplegable, opciones_desplegable);
+    let dropdownInstances = M.Dropdown.init(elementos_desplegable, opciones_desplegable);
 
-    // Inicializar Sidenav
-    let elementos_sidenav = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elementos_sidenav);
+    
 
     // Inicializar Carrusel
     let elementos_carrusel = document.querySelectorAll('#carruselId');
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators: true,
         duration: 200
     };
-    M.Carousel.init(elementos_carrusel, opciones_carrusel);
+    let carruselInstances = M.Carousel.init(elementos_carrusel, opciones_carrusel);
     // Configurar auto deslizamiento del carrusel
     setInterval(function() {
         let activeCarousel = document.querySelector('#carruselId');
@@ -43,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 200,
         fullWidth: true,
         indicators: false,
-        duration: 5000
+        duration: 10000
     };
-    M.Carousel.init(elementos_carrusel_auto, opciones_carrusel_auto);
+    let carrusel_autoInstance=M.Carousel.init(elementos_carrusel_auto, opciones_carrusel_auto);
 
     // Configurar auto deslizamiento del carrusel
     setInterval(function() {

@@ -65,14 +65,10 @@ nav ul a {
     font-size: 50px;
     margin: 20px;
 }
-
-
-
 /* Cambiar color de los indicadores no activos */
 #carruselId .indicators .indicator-item {
     background-color: #bdbdbd; /* Color gris claro para los indicadores no activos */
 }
-
 /* Cambiar color de los indicadores activos */
 #carruselId .indicators .indicator-item.active {
     background-color: #ff4081; /* Color rosa para el indicador activo */
@@ -82,6 +78,72 @@ nav ul a {
     background-color: #ffff;
 }
 #carruselAutoId img{
-    
     height: 80px;
+}
+#pagoPSE {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #ffffffe5;
+}
+
+.navigation-bar {
+    width: 610px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #0a0057;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #ffff;
+    font-size: 11px;
+}
+.nav-item i{
+    margin-right: 6px;
+}
+
+.nav-item:hover {
+    background-color: #4678f8;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.separator {
+    height: 30px;
+    width: 1px;
+    background-color: #ccc;
+}
+@media (max-width: 768px) {
+    .navigation-bar {
+        margin: auto;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .separator {
+        display: none;
+    }
 }
