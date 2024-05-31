@@ -246,8 +246,48 @@ footer {
     margin: 0;
     padding: 0;
 }
-#tarjetasInformativas{
-    background-color: #0a0057;
+
+#tarjetasInformativas {
+    background-color: #ffff;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas si no caben en una sola fila */
+    justify-content: space-around; /* Distribuye las tarjetas de manera uniforme en el contenedor */
+    font-size: 10px;
 }
 
+.contenedorTarjeta {
+    width: calc(33.33% - 20px); /* Ajusta el ancho de cada tarjeta para ocupar un tercio del contenedor, restando el espacio entre las tarjetas */
+    height: 200px;
+    margin-right: 10px; /* Espacio entre las tarjetas */
+    margin-bottom: 20px;
+    background-color: rgb(238, 238, 238); /* Color de fondo de las tarjetas */
+    padding: 20px; /* Espaciado interno de las tarjetas */
+    border-radius: 10px; /* Borde redondeado de las tarjetas */
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+}
 
+.imagenTarjeta img {
+    max-width: 100%; /* La imagen se ajustará automáticamente al ancho máximo del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    margin-right: 30px; /* Espacio entre la imagen y el texto */
+}
+
+.textTarjeta spam {
+    display: block; /* Cambia el elemento <spam> a un bloque para que se pueda centrar verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    margin-bottom: 5px; /* Espacio inferior entre el spam y el párrafo */
+}
+
+.textTarjeta p {
+    margin-bottom: 5px; /* Espacio inferior entre los párrafos */
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+    .contenedorTarjeta {
+        width: calc(50% - 20px); /* Ajusta el ancho de cada tarjeta para ocupar la mitad del contenedor en dispositivos pequeños */
+    }
+}
