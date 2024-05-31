@@ -1,78 +1,177 @@
-body{
+body {
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    overflow: scroll;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0; /* Elimina el relleno por defecto del body */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho y alto */
 }
-.row{
+.row {
     height: 100%;
     width: 100%;
 }
 
-nav{
+
+.sidenav {
+    z-index: 2000; /* Asegura que el sidenav está por encima de la navbar */
+  }
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que la navbar esté por encima de otros elementos */
     background-color: rgb(17, 17, 160);
-    justify-content: center;
-    align-content: center;
-    align-items: center;
     box-sizing: border-box;
-    height: 80px;
+    height: 105px;
 }
 
-#logo{
-    margin: 20px 20px;
+#logo {
+    position: absolute;
+    left: 90px;
+    margin-top: 10px;
 }
-#logo img{
-    width: 50px;
-    height: 50px;
-}
-#datosMenu{
-    margin: 10px;
+
+#datosMenu {
+    margin-top: 20px;
     padding-right: 200px;
 }
-#datosMenu li{
+
+#datosMenu li {
     border-radius: 100px;
     text-align: right;
 }
 
-#datosMenu li a{
+#datosMenu li a {
     text-align: right;
     border-radius: 100px;
 }
 
-#datosMenu li a:hover{
+#datosMenu li a:hover {
     border-radius: 100px;
     background-color: #0a0a0a;
     color: rgb(255, 255, 255);
 }
-.dropdown-content{
+
+.dropdown-content {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-#iconoMenu{
+#iconoMenu {
     font-size: 50px;
     margin: 20px;
+}
+footer {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: auto; /* Permite que el footer se ajuste en altura */
+    width: 100%;
+    background-color: rgb(17, 17, 160);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; /* Añade un pequeño espacio entre las columnas */
+}
+
+.logoFotter {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.separatorFotter {
+    margin-left: 10px; /* Ajustado para responsividad */
+    border-radius: 20px;
+    height: 90px;
+    width: 4px;
+    background-color: #ccc;
+}
+
+.leyendaFotter {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.leyendaFotter p {
+    margin: 8px;
+    padding: 0;
+    color: #fff;
+    line-height: 1;
+}
+
+.linksLateralesFotter {
+    display: flex;
+    flex-direction: column; /* Siempre en forma de columna */
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 14px;
+}
+
+.linksLateralesFotter a {
+    color: #fff;
+    margin: 2px 0; /* Añade espacio entre los enlaces */
+}
+
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center; /* Centra el texto en pantallas más pequeñas */
+        padding: 10px; /* Añade padding para espaciar el contenido */
+    }
+
+    .logoFooter, .leyendaFotter, .linksLateralesFooter {
+        justify-content: center;
+        text-align: center;
+        margin: 10px 0; /* Añade margen vertical para separar las secciones */
+    }
+
+    .separatorFotter {
+        display: none; /* Oculta el separador en pantallas pequeñas */
+    }
+
+    .linksLateralesFotter {
+        text-align: center; /* Ajusta el texto de los enlaces al centro */
+    }
+}
+
+/* inicio de los estilos del documento */
+.carrusel{
+    margin-top: 105px;
 }
 /* Cambiar color de los indicadores no activos */
 #carruselId .indicators .indicator-item {
     background-color: #bdbdbd; /* Color gris claro para los indicadores no activos */
 }
+
 /* Cambiar color de los indicadores activos */
 #carruselId .indicators .indicator-item.active {
     background-color: #ff4081; /* Color rosa para el indicador activo */
 }
+
 /* Estilos para el carrusel automático */
-#carruselAutoId{
+#carruselAutoId {
     background-color: #ffff;
 }
-#carruselAutoId img{
-    height: 80px;
+
+#carruselAutoId img {
+    height: 85px;
 }
+
 #pagoPSE {
     height: auto;
     width: 100%;
@@ -85,7 +184,7 @@ nav{
 .navigation-bar {
     display: flex;
     width: auto;
-    margin:20px 0px;
+    margin: 20px 0px;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 255);
@@ -107,7 +206,8 @@ nav{
     color: #0a0057;
     font-size: 10px;
 }
-.nav-item i{
+
+.nav-item i {
     margin-right: 6px;
 }
 
@@ -126,19 +226,28 @@ nav{
     width: 1px;
     background-color: #ccc;
 }
-#bannerEmpresa{
+
+#bannerEmpresa {
     margin: 0;
     padding: 0;
 }
-.imagenBanner{
+
+.imagenBanner {
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin: 0;
+    margin-bottom: 20px;
     padding: 0;
 }
-.imagenBanner img{
+
+.imagenBanner img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin: 0;
     padding: 0;
 }
+#tarjetasInformativas{
+    background-color: #0a0057;
+}
+
+
