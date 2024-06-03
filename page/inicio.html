@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensuly</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../inicio.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="carrusel">
+        <div class="carousel carousel-slider" id="carruselId">
+            <a class="carousel-item"><img src="images/sliderSuperior.jpg"></a>
+            <a class="carousel-item"><img src="images/sliderSuperior2.jpg"></a>
+        </div>
+    </section>
+    <section class="carruselAuto">
+        <div class="carousel carousel-slider" id="carruselAutoId">
+            <a class="carousel-item"><img src="../images/sliderbar-auto.png"></a>
+            <a class="carousel-item"><img src="../images/sliderbar-auto2.png"></a>
+            <a class="carousel-item"><img src="../images/sliderbar-auto3.png"></a>
+            <a class="carousel-item"><img src="../images/sliderbar-auto4.png"></a>
+            <a class="carousel-item"><img src="../images/sliderbar-auto5.png"></a>
+            <a class="carousel-item"><img src="../images/sliderbar-auto6.png"></a>
+            <a class="carousel-item"><img src="../images/sliderbar-auto7.png"></a>
+            <a class="carousel-item"><img src="../images/sliderbar-auto8.png"></a>
+        </div>
+    </section>
+    <section class="col s12" id="pagoPSE">
+        <div class="navigation-bar" id="menuPagos">
+            <div class="nav-item">
+                <i class="material-icons">shopping_cart</i>
+                <span>PAGOS EN LÍNEA</span>
+            </div>
+            <div class="separator"></div>
+            <div class="nav-item">
+                <i class="material-icons">apps</i>
+                <span>APPS CORPORATIVO</span>
+            </div>
+            <div class="separator"></div>
+            <div class="nav-item">
+                <i class="material-icons">phone</i>
+                <span>Contactar Ahora</span>
+            </div>
+        </div>
+    </section>
+    <section class="col s12" id="bannerEmpresa">
+        <div class="imagenBanner">
+            <img src="images/bannerEmpresa.png" alt="Banner de la empresa aprobado">
+        </div>
+    </section>
+    <section class="col s12" id="tarjetasInformativas">
+        <div class="contenedorTarjeta">
+            <div class="imagenTarjeta">
+                <img src="images/Cobertura.44a7f34e9b5eb2a84d06.png" alt="">
+            </div>
+            <div class="textTarjeta">
+                <spam>Cobertura</spam>
+                <p>Contamos con un gran alcance de 252 municipios a nivel nacional.</p>
+            </div>
+        </div>
+        <div class="contenedorTarjeta">
+            <div class="imagenTarjeta">
+                <img src="images/Distribucion.dc4a34cdb9ccabfe11bb.png" alt="">
+            </div>
+            <div class="textTarjeta">
+                <spam>Distribucion</spam>
+                <p>Actualmente tenemos 5 centros de distribución ubicados estratégicamente alrededor del país</p>
+            </div>
+        </div>
+        <div class="contenedorTarjeta">
+            <div class="imagenTarjeta">
+                <img src="images/Clientes.cf201e42a21c43f4183d.png" alt="">
+            </div>
+            <div class="textTarjeta">
+                <spam>Clientes</spam>
+                <p>Hemos impactado alrededor de 22.000 empresas naturales y jurídicas.</p>
+            </div>
+        </div>
+    </section>
+    <section class="sedes">
+        <div class="informacionSedes"></div>
+        <div class="mapaSedes"></div>
+    </section>
+    <section class="bannerTrabajaNosotros">
+        <div class="bannerTrabajo">
+            <img src="images/banner2.6c346a183d4d29a2174d.jpg" alt="Banner para trabajar con nosotros" class="imagenBanner">
+        </div>
+    </section>
+
+    <!-- Load jQuery before Materialize -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true
+            });
+
+            var autoElems = document.querySelectorAll('#carruselAutoId');
+            var autoInstances = M.Carousel.init(autoElems, {
+                fullWidth: true,
+                indicators: true,
+                duration: 200,
+                numVisible: 1,
+                dist: 0,
+                shift: 0,
+                padding: 20
+            });
+
+            setInterval(function() {
+                var elems = document.querySelectorAll('#carruselAutoId');
+                var instances = M.Carousel.getInstance(elems[0]);
+                if (instances) {
+                    instances.next();
+                }
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
